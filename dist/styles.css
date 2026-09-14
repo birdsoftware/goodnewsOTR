@@ -1,0 +1,1114 @@
+:root {
+  --navy: #091d35;
+  --navy-2: #102b4a;
+  --blue: #174d72;
+  --gold: #f0b43c;
+  --gold-light: #ffd97c;
+  --cream: #fffaf0;
+  --paper: #fffefd;
+  --ink: #122238;
+  --muted: #657183;
+  --line: #dfe4e8;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.site-header {
+  min-height: 88px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: center;
+  gap: 28px;
+  padding: 20px clamp(22px, 5vw, 76px);
+  background: linear-gradient(180deg, rgba(4, 14, 25, 0.72), rgba(4, 14, 25, 0));
+  color: #fff;
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 3;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 9px;
+  min-width: 0;
+  color: #fff;
+}
+
+.brand-script {
+  font-family: "Caveat", cursive;
+  font-size: 2.05rem;
+  font-weight: 700;
+  line-height: 0.82;
+}
+
+.brand-otr {
+  font-family: "Anton", "Arial Black", sans-serif;
+  font-size: 2.25rem;
+  line-height: 0.84;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px 30px;
+  min-width: 0;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+nav a {
+  line-height: 1.2;
+}
+
+nav a:hover {
+  color: var(--gold-light);
+}
+
+.nav-prayer {
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  padding: 9px 15px;
+  color: var(--gold-light);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 100svh;
+  display: flex;
+  color: #fff;
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(11, 22, 32, 0.08) 36%, rgba(4, 12, 20, 0.92) 100%),
+    linear-gradient(90deg, rgba(2, 11, 18, 0.26), rgba(2, 11, 18, 0.06) 48%, rgba(2, 11, 18, 0.36)),
+    url("assets/truck-hero-road.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 118px clamp(22px, 5vw, 76px) 48px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 38%;
+  background: linear-gradient(180deg, rgba(4, 12, 20, 0), rgba(4, 12, 20, 0.9));
+  pointer-events: none;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  width: min(1240px, 100%);
+  min-height: calc(100svh - 166px);
+  margin: auto;
+  display: grid;
+  grid-template-columns: minmax(240px, 0.75fr) minmax(280px, 1fr) minmax(170px, 0.38fr);
+  grid-template-rows: auto 1fr auto auto;
+  gap: 22px 34px;
+}
+
+.hero-copy {
+  grid-column: 1 / -1;
+  justify-self: center;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 4px 22px rgba(0, 0, 0, 0.58);
+}
+
+.script-logo {
+  margin: 0 0 -26px;
+  font-family: "Caveat", cursive;
+  font-size: 9rem;
+  font-weight: 700;
+  line-height: 0.86;
+}
+
+.hero h1 {
+  margin: 0;
+  max-width: none;
+  font-family: "Anton", "Arial Black", sans-serif;
+  font-size: 10.5rem;
+  line-height: 0.86;
+  color: #fff;
+}
+
+.gold-stroke {
+  display: block;
+  width: min(620px, 78vw);
+  height: 13px;
+  margin: 2px auto 10px;
+  background: linear-gradient(90deg, transparent, #b98732 12%, #e1b662 52%, #a37125 88%, transparent);
+  border-radius: 999px;
+  transform: rotate(-1.2deg);
+}
+
+.hero-tagline {
+  margin: 0;
+  color: #fff;
+  font-size: 1.45rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.side-blessing {
+  grid-column: 3;
+  align-self: center;
+  justify-self: end;
+  margin: 0;
+  color: #06171b;
+  font-family: "Caveat", cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 0.95;
+  text-align: right;
+  text-shadow: 0 2px 16px rgba(255, 255, 255, 0.55);
+  transform: rotate(-5deg);
+}
+
+.hero-bottom {
+  grid-column: 1 / -1;
+  align-self: end;
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+  text-align: center;
+}
+
+.hero-verse {
+  width: min(780px, 100%);
+  margin: 0;
+  color: rgba(255, 255, 255, 0.94);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.22;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.68);
+}
+
+.hero-verse span {
+  display: block;
+  margin-top: 6px;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.blessing-row {
+  width: min(980px, 100%);
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  color: #ffe1a2;
+}
+
+.blessing-row span {
+  display: grid;
+  align-content: center;
+  min-height: 54px;
+  padding: 8px;
+  border-top: 1px solid rgba(255, 225, 162, 0.38);
+  border-bottom: 1px solid rgba(255, 225, 162, 0.18);
+  font-size: 0.86rem;
+  font-weight: 800;
+  line-height: 1.18;
+  text-transform: uppercase;
+}
+
+.journey-brush {
+  margin: 0;
+  width: min(560px, 92%);
+  padding: 10px 24px 13px;
+  color: #07161a;
+  background: linear-gradient(90deg, transparent, #d7a84e 9%, #f1d27a 50%, #d7a84e 91%, transparent);
+  font-family: "Caveat", cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 0.9;
+  transform: rotate(-1deg);
+}
+
+.hero-actions {
+  grid-column: 1 / -1;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 0;
+}
+
+.route-label,
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: var(--blue);
+}
+
+.route-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--gold-light);
+}
+
+.route-label span {
+  display: block;
+  width: 44px;
+  height: 2px;
+  background: var(--gold);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Newsreader", Georgia, serif;
+  line-height: 1.05;
+  margin: 0;
+  letter-spacing: 0;
+}
+
+h1 {
+  max-width: 900px;
+  margin: 24px 0;
+  font-size: 6.9rem;
+}
+
+h1 em {
+  color: var(--gold);
+  font-style: normal;
+}
+
+.mission {
+  max-width: 670px;
+  color: #dbe4ee;
+  font-size: 1.25rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.primary,
+.gold-button {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.primary:hover,
+.gold-button:hover {
+  background: var(--gold-light);
+}
+
+.text-link {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+  font-weight: 700;
+}
+
+.section {
+  padding: 90px clamp(24px, 8vw, 120px);
+}
+
+.section-intro {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 60px;
+  align-items: end;
+  max-width: 1220px;
+  margin: 0 auto 42px;
+}
+
+.section-intro h2,
+.study-copy h2,
+.prayer-heading h2 {
+  margin-top: 8px;
+  font-size: 4.55rem;
+}
+
+.section-intro > p {
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+.theme-tabs {
+  display: flex;
+  gap: 8px;
+  max-width: 1220px;
+  margin: 0 auto 18px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.theme-tab {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.theme-tab.active {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+.devotional-card {
+  max-width: 1220px;
+  margin: auto;
+  background: var(--cream);
+  border: 1px solid #eadfca;
+  display: grid;
+  grid-template-columns: 105px 1fr;
+  box-shadow: 0 18px 50px rgba(20, 32, 45, 0.08);
+}
+
+.card-route {
+  background: var(--navy);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  gap: 16px;
+}
+
+.card-route span:first-child {
+  color: var(--gold);
+  font: 700 2rem "Newsreader", Georgia, serif;
+}
+
+.card-route b {
+  width: 1px;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.card-route span:last-child {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.15em;
+  font-size: 0.68rem;
+}
+
+.devotional-copy {
+  padding: 58px clamp(28px, 6vw, 68px) 62px;
+}
+
+.verse {
+  max-width: 950px;
+  margin: 0;
+  font: 700 3rem/1.25 "Newsreader", Georgia, serif;
+}
+
+.reference {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.devotional-copy hr {
+  border: 0;
+  border-top: 1px solid #dacfb9;
+  margin: 28px 0;
+}
+
+.devotional-copy h3 {
+  margin-bottom: 14px;
+  font-size: 1.72rem;
+}
+
+.reflection-body {
+  max-width: 900px;
+  color: #485465;
+}
+
+.reflection-body p {
+  margin: 0 0 1rem;
+}
+
+.reflection-body p:last-child {
+  margin-bottom: 0;
+}
+
+.prayer-line {
+  display: flex;
+  gap: 18px;
+  margin-top: 28px;
+  padding: 18px 20px;
+  background: #fff;
+  border-left: 3px solid var(--gold);
+}
+
+.prayer-line span {
+  padding-top: 4px;
+  color: var(--blue);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.prayer-line p {
+  margin: 0;
+}
+
+.scripture-shelf {
+  max-width: 1220px;
+  margin: 18px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.scripture-chip {
+  border: 1px solid var(--line);
+  padding: 18px;
+  background: #fff;
+}
+
+.scripture-chip b {
+  display: block;
+  color: var(--blue);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.scripture-chip p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.study-band {
+  background: var(--navy);
+  color: #fff;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.65fr);
+  gap: 9vw;
+  align-items: center;
+}
+
+.study-copy {
+  max-width: 700px;
+}
+
+.gold {
+  color: var(--gold-light);
+}
+
+.study-copy > p:not(.eyebrow):not(.calendar-note) {
+  color: #cbd7e3;
+  font-size: 1.1rem;
+}
+
+.study-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 30px 0;
+}
+
+.study-meta div {
+  padding: 20px 10px 20px 0;
+}
+
+.study-meta div + div {
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  padding-left: 24px;
+}
+
+.study-meta small {
+  display: block;
+  color: var(--gold);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+}
+
+.study-meta strong {
+  font-size: 1.05rem;
+}
+
+.study-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.live-link {
+  font-weight: 800;
+}
+
+.live-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: #f04747;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+.calendar-note {
+  margin-top: 22px;
+  color: #94a8bb;
+  font-size: 0.82rem;
+}
+
+.study-card {
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 18px 18px 0 var(--gold);
+}
+
+.calendar-top {
+  background: var(--blue);
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.calendar-top span {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.calendar-top strong {
+  font: 700 4.5rem/1 "Newsreader", Georgia, serif;
+}
+
+.calendar-body {
+  padding: 32px;
+}
+
+.calendar-body > span {
+  color: var(--blue);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.calendar-body h3 {
+  margin: 8px 0;
+  font-size: 2rem;
+}
+
+.stream-badge {
+  display: inline-block;
+  background: #ffe8e8;
+  color: #a32323;
+  border-radius: 4px;
+  padding: 7px 10px;
+  margin-top: 12px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+}
+
+.outreach {
+  background: #f4f7f8;
+}
+
+.outreach-grid {
+  max-width: 1220px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 18px;
+}
+
+.photo-card {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: contain;
+  background: #fff;
+  display: block;
+}
+
+.photo-card figcaption {
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.photo-card figcaption span {
+  color: var(--muted);
+}
+
+.prayer-section {
+  background: var(--navy-2);
+  color: #fff;
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 9vw;
+}
+
+.prayer-heading > p:not(.eyebrow) {
+  color: #cbd7e3;
+}
+
+.prayer-heading blockquote {
+  margin: 38px 0 0;
+  padding: 22px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--gold-light);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.35rem;
+}
+
+.prayer-heading cite {
+  display: block;
+  margin-top: 8px;
+  color: #fff;
+  font: 700 0.78rem "DM Sans", Arial, sans-serif;
+}
+
+.prayer-form {
+  background: #fff;
+  color: var(--ink);
+  padding: clamp(25px, 4vw, 46px);
+  border-radius: 4px;
+}
+
+.prayer-form label {
+  display: block;
+  margin: 0 0 7px;
+  font-weight: 800;
+}
+
+.prayer-form label span {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.prayer-form input,
+.prayer-form textarea {
+  width: 100%;
+  border: 1px solid #cfd6dc;
+  background: #f9fafb;
+  padding: 13px 14px;
+  border-radius: 4px;
+  margin-bottom: 18px;
+  color: var(--ink);
+}
+
+.prayer-form textarea {
+  resize: vertical;
+}
+
+.prayer-form input:focus,
+.prayer-form textarea:focus {
+  outline: 3px solid rgba(240, 180, 60, 0.35);
+  border-color: var(--gold);
+}
+
+.checkbox {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500 !important;
+}
+
+.checkbox input {
+  width: 18px !important;
+  margin: 0 !important;
+}
+
+.checkbox span {
+  color: var(--ink) !important;
+}
+
+.submit {
+  width: 100%;
+  margin-top: 17px;
+}
+
+.form-note,
+.form-status {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.form-status {
+  color: #276244;
+  font-weight: 800;
+}
+
+footer {
+  background: #061527;
+  color: #9db0c3;
+  text-align: center;
+  padding: 46px 20px 50px;
+}
+
+.footer-brand {
+  justify-content: center;
+  margin: 0 auto 10px;
+  width: auto;
+}
+
+.footer-verse {
+  margin-top: 22px;
+  font-family: "Newsreader", Georgia, serif;
+}
+
+.footer-verse b {
+  display: block;
+  margin-top: 5px;
+  color: var(--gold);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 1050px) {
+  h1 {
+    font-size: 5.15rem;
+  }
+
+  .script-logo {
+    font-size: 7rem;
+  }
+
+  .hero h1 {
+    font-size: 8rem;
+  }
+
+  .side-blessing {
+    font-size: 2.45rem;
+  }
+
+  .section-intro h2,
+  .study-copy h2,
+  .prayer-heading h2 {
+    font-size: 3.65rem;
+  }
+
+  .verse {
+    font-size: 2.45rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .site-header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 12px;
+    padding: 14px 18px 18px;
+    background: linear-gradient(180deg, rgba(4, 14, 25, 0.82), rgba(4, 14, 25, 0.18));
+  }
+
+  .brand {
+    width: auto;
+  }
+
+  .brand-script {
+    font-size: 1.9rem;
+  }
+
+  .brand-otr {
+    font-size: 2.05rem;
+  }
+
+  nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    font-size: 0.78rem;
+  }
+
+  nav a,
+  .nav-prayer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 8px 9px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .nav-prayer {
+    border-color: var(--gold);
+  }
+
+  .hero {
+    min-height: auto;
+    background-attachment: scroll;
+    background-position: 62% center;
+    padding: 150px 22px 56px;
+  }
+
+  .hero-overlay {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    min-height: 0;
+    gap: 24px;
+  }
+
+  .hero-copy,
+  .side-blessing,
+  .hero-bottom,
+  .hero-actions {
+    grid-column: 1;
+  }
+
+  .hero-copy {
+    justify-self: stretch;
+    text-align: left;
+  }
+
+  .script-logo {
+    margin-bottom: -12px;
+    color: #fff;
+    font-size: 4.9rem;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.62);
+  }
+
+  .hero h1 {
+    color: #fff;
+    font-size: 6.1rem;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.62);
+  }
+
+  .gold-stroke {
+    width: 86%;
+    margin-inline: 0;
+  }
+
+  .hero-tagline {
+    color: #fff;
+    font-size: 1rem;
+    text-shadow: 0 3px 14px rgba(0, 0, 0, 0.62);
+  }
+
+  .side-blessing {
+    justify-self: start;
+    color: #fff;
+    font-size: 2.45rem;
+    text-align: left;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.62);
+    transform: rotate(-2deg);
+  }
+
+  .hero-bottom {
+    justify-items: start;
+    text-align: left;
+  }
+
+  .hero-verse {
+    font-size: 1.14rem;
+  }
+
+  .blessing-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .blessing-row span {
+    min-height: 48px;
+    font-size: 0.76rem;
+  }
+
+  .journey-brush {
+    width: 100%;
+    font-size: 2.35rem;
+  }
+
+  .hero-actions {
+    justify-self: stretch;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .section {
+    padding: 65px 22px;
+  }
+
+  .section-intro,
+  .study-band,
+  .prayer-section {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .section-intro {
+    align-items: start;
+  }
+
+  .section-intro h2,
+  .study-copy h2,
+  .prayer-heading h2 {
+    font-size: 3rem;
+  }
+
+  .devotional-card {
+    grid-template-columns: 1fr;
+  }
+
+  .card-route {
+    flex-direction: row;
+    padding: 14px 18px;
+  }
+
+  .card-route b {
+    width: auto;
+    height: 1px;
+  }
+
+  .card-route span:last-child {
+    writing-mode: initial;
+    transform: none;
+    text-align: right;
+  }
+
+  .devotional-copy {
+    padding: 28px 23px 34px;
+  }
+
+  .verse {
+    font-size: 2rem;
+  }
+
+  .prayer-line {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .scripture-shelf {
+    grid-template-columns: 1fr;
+  }
+
+  .study-card {
+    margin: 0 16px 18px 0;
+  }
+
+  .study-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .study-meta div + div {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-left: 0;
+  }
+
+  .outreach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-card img {
+    height: 280px;
+  }
+
+  .photo-card figcaption {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 430px) {
+  .site-header {
+    padding-inline: 14px;
+  }
+
+  nav {
+    font-size: 0.72rem;
+  }
+
+  nav a,
+  .nav-prayer {
+    padding-inline: 6px;
+  }
+
+  .script-logo {
+    font-size: 4.2rem;
+  }
+
+  .hero h1 {
+    font-size: 5.25rem;
+  }
+
+  .section-intro h2,
+  .study-copy h2,
+  .prayer-heading h2 {
+    font-size: 2.55rem;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .blessing-row {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-brush {
+    font-size: 2rem;
+  }
+
+  .study-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

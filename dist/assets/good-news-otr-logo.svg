@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Good News OTR logo</title>
+  <desc id="desc">A semi truck on an open road toward a sunrise cross with the words Good News OTR.</desc>
+  <defs>
+    <linearGradient id="sunrise" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffb21c"/>
+      <stop offset="0.58" stop-color="#ffd84d"/>
+      <stop offset="1" stop-color="#fff2a6"/>
+    </linearGradient>
+    <linearGradient id="goldText" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffe879"/>
+      <stop offset="0.48" stop-color="#f7b91d"/>
+      <stop offset="1" stop-color="#d98c06"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0a3760"/>
+      <stop offset="1" stop-color="#071b35"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#06172b" flood-opacity="0.24"/>
+    </filter>
+    <clipPath id="horizonClip">
+      <path d="M500 555 A405 405 0 0 1 1310 555 L1310 645 L500 645 Z"/>
+    </clipPath>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <g clip-path="url(#horizonClip)">
+      <path d="M500 555 A405 405 0 0 1 1310 555 L1310 645 L500 645 Z" fill="url(#sunrise)"/>
+      <g stroke="#fff7d4" stroke-width="10" stroke-linecap="round" opacity="0.62">
+        <path d="M905 458 L905 135"/>
+        <path d="M905 458 L742 174"/>
+        <path d="M905 458 L595 283"/>
+        <path d="M905 458 L1214 282"/>
+        <path d="M905 458 L1068 174"/>
+        <path d="M905 458 L1262 420"/>
+        <path d="M905 458 L548 420"/>
+      </g>
+      <path d="M490 568 C600 510 670 514 748 548 C815 578 868 575 930 538 C1015 488 1104 491 1198 538 C1242 560 1280 570 1320 562 L1320 645 L490 645 Z" fill="#2678b8"/>
+      <path d="M500 630 C620 578 715 586 795 622 C900 670 1010 640 1110 590 C1180 554 1250 560 1320 620 L1320 645 L500 645 Z" fill="#6bb341"/>
+      <path d="M905 392 a112 112 0 1 0 0.1 0" fill="#ffc62f"/>
+      <rect x="881" y="326" width="48" height="180" rx="5" fill="#fff"/>
+      <rect x="826" y="381" width="158" height="46" rx="5" fill="#fff"/>
+    </g>
+    <path d="M500 555 A405 405 0 0 1 1310 555" fill="none" stroke="#07305c" stroke-width="24" stroke-linecap="round"/>
+    <path d="M500 555 A405 405 0 0 1 1310 555" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round"/>
+
+    <path d="M905 500 C845 568 784 664 724 805 L1086 805 C1030 660 967 566 905 500 Z" fill="url(#road)" stroke="#ffffff" stroke-width="11"/>
+    <path d="M818 805 C856 675 882 588 905 506 C932 595 967 681 1010 805" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+    <g stroke="#f7b91d" stroke-width="11" stroke-linecap="round">
+      <path d="M905 560 L905 615"/>
+      <path d="M905 665 L905 728"/>
+    </g>
+
+    <g id="truck" transform="translate(115 18)">
+      <path d="M514 316 L938 354 Q964 357 976 382 L976 555 L502 555 L502 354 Q502 323 514 316 Z" fill="#ffffff" stroke="#062b52" stroke-width="18" stroke-linejoin="round"/>
+      <path d="M595 375 L918 404 L918 540 L595 540 Z" fill="#f7fbff" stroke="#062b52" stroke-width="10" opacity="0.98"/>
+      <path d="M652 463 L874 490" fill="none" stroke="#0c3561" stroke-width="17" stroke-linecap="round"/>
+      <path d="M652 507 L845 528" fill="none" stroke="#0c3561" stroke-width="10" stroke-linecap="round"/>
+
+      <path d="M144 555 L124 464 Q119 438 137 418 L206 347 Q233 320 271 319 L399 319 Q436 319 459 349 L515 424 Q535 452 535 490 L535 555 Z" fill="#ffffff" stroke="#062b52" stroke-width="18" stroke-linejoin="round"/>
+      <path d="M235 363 L375 363 Q401 363 418 385 L458 439 L205 439 L214 387 Q218 363 235 363 Z" fill="#d8edff" stroke="#062b52" stroke-width="10" stroke-linejoin="round"/>
+      <path d="M427 392 L502 477 L502 536 L461 536 L461 440 Z" fill="#f7fbff" stroke="#062b52" stroke-width="10" stroke-linejoin="round"/>
+
+      <path d="M214 462 L455 462 L435 535 L173 535 Z" fill="#ffffff" stroke="#062b52" stroke-width="10" stroke-linejoin="round"/>
+      <rect x="185" y="494" width="168" height="52" rx="14" fill="#062b52"/>
+      <g stroke="#ffffff" stroke-width="8" stroke-linecap="round">
+        <path d="M205 509 L334 509"/>
+        <path d="M200 527 L339 527"/>
+      </g>
+      <path d="M137 523 Q98 535 87 555 L151 555 Z" fill="#ffffff" stroke="#062b52" stroke-width="10" stroke-linejoin="round"/>
+      <path d="M110 468 L63 493 L63 544 L124 544 Z" fill="#ffffff" stroke="#062b52" stroke-width="10" stroke-linejoin="round"/>
+      <path d="M55 507 L105 488" stroke="#f7b91d" stroke-width="12" stroke-linecap="round"/>
+
+      <g fill="#062b52">
+        <circle cx="278" cy="555" r="54"/>
+        <circle cx="564" cy="555" r="54"/>
+        <circle cx="799" cy="555" r="38"/>
+        <circle cx="876" cy="555" r="38"/>
+      </g>
+      <g fill="#ffffff">
+        <circle cx="278" cy="555" r="28"/>
+        <circle cx="564" cy="555" r="28"/>
+        <circle cx="799" cy="555" r="20"/>
+        <circle cx="876" cy="555" r="20"/>
+      </g>
+      <g fill="#062b52">
+        <path d="M284 432 C282 406 300 390 324 391 C347 392 364 410 362 434 L284 432 Z"/>
+        <circle cx="320" cy="403" r="24"/>
+        <path d="M365 432 C366 407 383 391 408 391 C432 391 449 409 449 434 L365 432 Z"/>
+        <circle cx="404" cy="402" r="23"/>
+        <path d="M426 393 C451 397 464 408 468 429 C445 422 430 413 426 393 Z"/>
+      </g>
+      <path d="M408 370 C435 389 445 410 440 435" fill="none" stroke="#062b52" stroke-width="11" stroke-linecap="round"/>
+      <g fill="#f7b91d">
+        <rect x="244" y="331" width="18" height="10" rx="5"/>
+        <rect x="287" y="331" width="18" height="10" rx="5"/>
+        <rect x="330" y="331" width="18" height="10" rx="5"/>
+      </g>
+    </g>
+
+    <path d="M78 802 Q95 698 216 690 L1264 690 Q1448 692 1528 803 Q1438 835 1270 838 L216 838 Q126 836 78 802 Z" fill="#062b52" stroke="#ffffff" stroke-width="14" stroke-linejoin="round"/>
+    <path d="M155 861 C436 893 955 895 1377 852" fill="none" stroke="#f7b91d" stroke-width="20" stroke-linecap="round"/>
+    <text x="118" y="812" font-family="Montserrat, Arial Black, Arial, sans-serif" font-size="150" font-weight="900" letter-spacing="0" fill="#ffffff" stroke="#062b52" stroke-width="10" paint-order="stroke fill">Good News</text>
+    <text x="1038" y="812" font-family="Montserrat, Arial Black, Arial, sans-serif" font-size="168" font-weight="900" letter-spacing="0" fill="url(#goldText)" stroke="#062b52" stroke-width="11" paint-order="stroke fill">OTR</text>
+  </g>
+</svg>
