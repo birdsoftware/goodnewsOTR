@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Scan the Good News OTR QR code to open the website.">
+  <title>Good News OTR | QR Code</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=DM+Sans:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b213c'/%3E%3Cpath d='M31 10h6v15h12v6H37v23h-6V31H19v-6h12z' fill='%23f4b942'/%3E%3C/svg%3E">
+</head>
+<body class="qr-page">
+  <header class="site-header qr-header">
+    <a class="brand" href="/" aria-label="Good News OTR home">
+      <span class="brand-script">Good News</span>
+      <span class="brand-otr">OTR</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="/#devotional">Devotional</a>
+      <a href="/#study">Bible Study</a>
+      <a class="nav-prayer" href="/#prayer">Request Prayer</a>
+      <a href="/qr/" aria-current="page">QR Code</a>
+      <button class="nav-share" type="button" data-share-site>Share</button>
+    </nav>
+  </header>
+
+  <main class="qr-main">
+    <section class="qr-card" aria-labelledby="qrTitle">
+      <p class="script-logo qr-script">Good News</p>
+      <h1 id="qrTitle">Scan for OTR</h1>
+      <p class="qr-copy">Open this page on your phone, then let someone scan the code to visit Good News OTR.</p>
+      <img class="qr-code" src="../assets/goodnewsotr-qr.svg" alt="QR code for https://goodnewsotr.netlify.app/">
+      <a class="site-url" href="https://goodnewsotr.netlify.app/">goodnewsotr.netlify.app</a>
+      <div class="qr-actions">
+        <button class="button primary" type="button" data-share-site>Share site</button>
+        <a class="text-link qr-home-link" href="/">Back to site</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="../share.js"></script>
+</body>
+</html>

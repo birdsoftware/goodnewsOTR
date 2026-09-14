@@ -12,6 +12,8 @@ Good News OTR is a faith-centered website for an over-the-road trucker couple sh
 - Sunday Bible study information with a Google Calendar link
 - Outreach visuals for scripture bracelets and Jesus Loves You charms
 - A prayer request form that opens an email draft
+- A QR code page at `/qr/` for quick in-person sharing
+- Native share buttons with copy-link fallback
 
 ## Netlify Setup
 
