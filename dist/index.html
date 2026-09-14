@@ -63,37 +63,28 @@
           <p class="eyebrow">DAILY DEVOTIONAL · <span id="todayDate"></span></p>
           <h2>A word for the road ahead.</h2>
         </div>
-        <p>Choose what your heart needs today, or follow along with the daily reading.</p>
-      </div>
-
-      <div class="theme-tabs" role="tablist" aria-label="Devotional themes">
-        <button class="theme-tab active" data-theme="daily" role="tab" aria-selected="true">Today</button>
-        <button class="theme-tab" data-theme="blessing" role="tab" aria-selected="false">Blessing</button>
-        <button class="theme-tab" data-theme="fear" role="tab" aria-selected="false">Fear</button>
-        <button class="theme-tab" data-theme="struggle" role="tab" aria-selected="false">Struggle</button>
-        <button class="theme-tab" data-theme="healing" role="tab" aria-selected="false">Healing</button>
+        <p>One daily devotional for every day of the year, with a fresh scripture reading and theme for the road.</p>
       </div>
 
       <article class="devotional-card" aria-live="polite">
-        <div class="card-route"><span id="devotionalNumber">01</span><b></b><span id="themeName">DAILY WORD</span></div>
+        <div class="card-route"><span id="themeName">BLESSING</span><b></b><span>DAILY WORD</span></div>
         <div class="devotional-copy">
-          <p class="verse" id="verseText"></p>
-          <p class="reference" id="verseReference"></p>
+          <p class="verse-label">TODAY'S SCRIPTURE</p>
+          <a class="verse verse-link" id="verseText" target="_blank" rel="noopener"></a>
+          <p class="reference"><a id="verseReference" target="_blank" rel="noopener"></a></p>
           <hr>
           <h3 id="devotionalTitle"></h3>
           <div class="reflection-body" id="devotionalReflection"></div>
           <div class="prayer-line"><span>PRAY</span><p id="devotionalPrayer"></p></div>
         </div>
       </article>
-
-      <div class="scripture-shelf" id="scriptureShelf"></div>
     </section>
 
     <section class="study-band section" id="study">
       <div class="study-copy">
         <p class="eyebrow gold">NEXT BIBLE STUDY</p>
         <h2>Join us next Sunday.</h2>
-        <p>We’ll open the Bible together and talk through this week’s devotional themes—live from wherever the road takes us.</p>
+        <p>We’ll open the Bible together and talk through this week’s daily readings—live from wherever the road takes us.</p>
         <div class="study-meta">
           <div><small>TOPIC</small><strong id="studyTitle">Faith for the Road</strong></div>
           <div><small>WHEN</small><strong id="studyTime">Sunday · 6:00 PM PT</strong></div>
@@ -156,6 +147,7 @@
     <p>Sharing the hope of Jesus from coast to coast.</p>
     <p class="footer-verse">“Go into all the world and preach the gospel.” <b>Mark 16:15</b></p>
   </footer>
+  <script src="devotionals.js"></script>
   <script src="script.js"></script>
   <script src="share.js"></script>
 </body>

@@ -16,8 +16,10 @@ Good News OTR is a faith-centered website for an over-the-road trucker couple sh
 ## Current Features
 
 - Full-screen truck-road hero with parallax-style motion
-- Daily devotional themes for blessing, fear, struggle, and healing
-- Longer scripture reflections with prayer prompts
+- 365-day devotional plan with one daily scripture reading
+- Rotating daily themes such as Blessing, Fear, Calling, Peace, Hope, and Rest
+- BibleGateway source links for each reading in the Good News Translation
+- Longer devotional reflections with prayer prompts
 - Sunday Bible study section with a Google Calendar link
 - Prayer request form that opens an email draft
 - Truck-stop outreach section for scripture bracelets and Jesus Loves You charms
@@ -42,6 +44,7 @@ The included `netlify.toml` already sets the publish directory to `dist`.
 dist/
   index.html
   styles.css
+  devotionals.js
   script.js
   share.js
   qr/

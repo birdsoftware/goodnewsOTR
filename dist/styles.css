@@ -387,39 +387,13 @@ h1 em {
   margin: 0 0 8px;
 }
 
-.theme-tabs {
-  display: flex;
-  gap: 8px;
-  max-width: 1220px;
-  margin: 0 auto 18px;
-  overflow-x: auto;
-  padding-bottom: 2px;
-}
-
-.theme-tab {
-  border: 1px solid var(--line);
-  background: #fff;
-  padding: 10px 18px;
-  border-radius: 999px;
-  color: var(--muted);
-  font-weight: 800;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.theme-tab.active {
-  background: var(--navy);
-  color: #fff;
-  border-color: var(--navy);
-}
-
 .devotional-card {
   max-width: 1220px;
   margin: auto;
   background: var(--cream);
   border: 1px solid #eadfca;
   display: grid;
-  grid-template-columns: 105px 1fr;
+  grid-template-columns: 116px 1fr;
   box-shadow: 0 18px 50px rgba(20, 32, 45, 0.08);
 }
 
@@ -434,8 +408,13 @@ h1 em {
 }
 
 .card-route span:first-child {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
   color: var(--gold);
-  font: 700 2rem "Newsreader", Georgia, serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .card-route b {
@@ -455,15 +434,36 @@ h1 em {
   padding: 58px clamp(28px, 6vw, 68px) 62px;
 }
 
+.verse-label {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
 .verse {
+  display: inline-block;
   max-width: 950px;
   margin: 0;
   font: 700 3rem/1.25 "Newsreader", Georgia, serif;
 }
 
+.verse-link:hover {
+  color: var(--blue);
+}
+
 .reference {
   color: var(--blue);
   font-weight: 800;
+}
+
+.reference a {
+  border-bottom: 1px solid rgba(23, 77, 114, 0.28);
+}
+
+.reference a:hover {
+  border-color: currentColor;
 }
 
 .devotional-copy hr {
@@ -509,33 +509,6 @@ h1 em {
 
 .prayer-line p {
   margin: 0;
-}
-
-.scripture-shelf {
-  max-width: 1220px;
-  margin: 18px auto 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-
-.scripture-chip {
-  border: 1px solid var(--line);
-  padding: 18px;
-  background: #fff;
-}
-
-.scripture-chip b {
-  display: block;
-  color: var(--blue);
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-}
-
-.scripture-chip p {
-  margin: 5px 0 0;
-  color: var(--muted);
-  font-size: 0.92rem;
 }
 
 .study-band {
@@ -1112,9 +1085,17 @@ footer {
     height: 1px;
   }
 
+  .card-route span:first-child,
   .card-route span:last-child {
     writing-mode: initial;
     transform: none;
+  }
+
+  .card-route span:first-child {
+    text-align: left;
+  }
+
+  .card-route span:last-child {
     text-align: right;
   }
 
@@ -1129,10 +1110,6 @@ footer {
   .prayer-line {
     flex-direction: column;
     gap: 6px;
-  }
-
-  .scripture-shelf {
-    grid-template-columns: 1fr;
   }
 
   .study-card {
