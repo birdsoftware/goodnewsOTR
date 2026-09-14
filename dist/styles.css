@@ -165,7 +165,7 @@ nav button:hover {
 }
 
 .script-logo {
-  margin: 0 0 -26px;
+  margin: 0 0 -4px;
   font-family: "Caveat", cursive;
   font-size: 9rem;
   font-weight: 700;
@@ -989,7 +989,7 @@ footer {
   }
 
   .script-logo {
-    margin-bottom: -12px;
+    margin-bottom: 0;
     color: #fff;
     font-size: 4.9rem;
     text-shadow: 0 4px 18px rgba(0, 0, 0, 0.62);
