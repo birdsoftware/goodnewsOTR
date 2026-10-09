@@ -11,12 +11,14 @@ Good News OTR is a faith-centered website for an over-the-road trucker couple sh
 ## Live Pages
 
 - Home: <https://goodnewsotr.netlify.app/>
+- 365 God's Promises: <https://goodnewsotr.netlify.app/promises/>
 - QR code page: <https://goodnewsotr.netlify.app/qr/>
 
 ## Current Features
 
 - Full-screen truck-road hero with parallax-style motion
 - 365-day devotional plan with one daily scripture reading
+- Searchable 365 God's Promises page with themed scripture cards
 - Rotating daily themes such as Blessing, Fear, Calling, Peace, Hope, and Rest
 - BibleGateway source links for each reading in the Good News Translation
 - Longer devotional reflections with prayer prompts
@@ -45,8 +47,12 @@ dist/
   index.html
   styles.css
   devotionals.js
+  promises-data.js
+  promises.js
   script.js
   share.js
+  promises/
+    index.html
   qr/
     index.html
   assets/
