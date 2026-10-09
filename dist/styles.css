@@ -908,11 +908,39 @@ footer {
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
 }
 
-.promises-hero p:last-child {
+.promises-hero > p {
   max-width: 720px;
   margin: 18px 0 0;
   color: #dbe6f0;
   font-size: 1.1rem;
+}
+
+.promises-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.promise-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border: 1px solid rgba(244, 185, 66, 0.86);
+  border-radius: 4px;
+  padding: 0 18px;
+  background: rgba(244, 185, 66, 0.12);
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18);
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.promise-download:hover {
+  background: rgba(244, 185, 66, 0.22);
+  transform: translateY(-1px);
 }
 
 .promises-board {
@@ -1437,6 +1465,11 @@ footer {
 
   .promises-hero h1 {
     font-size: 2.75rem;
+  }
+
+  .promises-hero-actions,
+  .promise-download {
+    width: 100%;
   }
 
   .promises-grid {

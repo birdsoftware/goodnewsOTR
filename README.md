@@ -2,7 +2,7 @@
 
 Faith for the road, hope for every mile.
 
-[Visit the live site](https://goodnewsotr.netlify.app/) · [Open the QR page](https://goodnewsotr.netlify.app/qr/)
+[Visit the live site](https://goodnewsotr.netlify.app/) · [Open the QR page](https://goodnewsotr.netlify.app/qr/) · [Download the promises PDF](https://goodnewsotr.netlify.app/assets/gods-promises-printable.pdf)
 
 ![Good News OTR truck hero](dist/assets/truck-hero-road.png)
 
@@ -12,6 +12,7 @@ Good News OTR is a faith-centered website for an over-the-road trucker couple sh
 
 - Home: <https://goodnewsotr.netlify.app/>
 - 365 God's Promises: <https://goodnewsotr.netlify.app/promises/>
+- Printable promises PDF: <https://goodnewsotr.netlify.app/assets/gods-promises-printable.pdf>
 - QR code page: <https://goodnewsotr.netlify.app/qr/>
 
 ## Current Features
@@ -19,6 +20,7 @@ Good News OTR is a faith-centered website for an over-the-road trucker couple sh
 - Full-screen truck-road hero with parallax-style motion
 - 365-day devotional plan with one daily scripture reading
 - Searchable 365 God's Promises page with themed scripture cards
+- Printable 365 promises PDF with public-domain WEB scripture text
 - Rotating daily themes such as Blessing, Fear, Calling, Peace, Hope, and Rest
 - BibleGateway source links for each reading in the Good News Translation
 - Longer devotional reflections with prayer prompts
@@ -57,6 +59,7 @@ dist/
     index.html
   assets/
     truck-hero-road.png
+    gods-promises-printable.pdf
     goodnewsotr-qr.svg
     scripture-bracelets.png
     jesus-keychains.png
