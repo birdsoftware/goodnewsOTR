@@ -20,6 +20,8 @@ Good News OTR is a faith-centered website for an over-the-road trucker couple sh
 - Full-screen truck-road hero with parallax-style motion
 - 365-day devotional plan with one daily scripture reading
 - Searchable 365 God's Promises page with themed scripture cards
+- Embedded Promises page guide video
+- In-page promise reader with a sticky Back button and GNT source frame
 - Printable 365 promises PDF with public-domain WEB scripture text
 - Rotating daily themes such as Blessing, Fear, Calling, Peace, Hope, and Rest
 - BibleGateway source links for each reading in the Good News Translation
@@ -59,6 +61,8 @@ dist/
     index.html
   assets/
     truck-hero-road.png
+    promises-guide.mp4
+    promises-guide-poster.png
     gods-promises-printable.pdf
     goodnewsotr-qr.svg
     scripture-bracelets.png

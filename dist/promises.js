@@ -44,6 +44,14 @@ const searchInput = document.getElementById("promiseSearch");
 const countLabel = document.getElementById("promiseCount");
 const emptyMessage = document.getElementById("promiseEmpty");
 const themeStrip = document.getElementById("themeStrip");
+const scripturePanel = document.getElementById("scripturePanel");
+const scripturePanelIcon = document.getElementById("scripturePanelIcon");
+const scripturePanelTheme = document.getElementById("scripturePanelTheme");
+const scripturePanelTitle = document.getElementById("scripturePanelTitle");
+const scripturePanelSummary = document.getElementById("scripturePanelSummary");
+const scripturePanelSource = document.getElementById("scripturePanelSource");
+const scripturePanelFrame = document.getElementById("scripturePanelFrame");
+const readerCloseButton = document.querySelector("[data-close-reader]");
 
 function iconMarkup(theme) {
   const meta = promiseThemes[theme] || promiseThemes.Faithfulness;
@@ -63,6 +71,24 @@ function promiseMatches(item, rawQuery) {
   const query = normalize(rawQuery);
   const searchable = normalize(`${item.day} ${item.theme} ${item.reference}`);
   return query.split(" ").every(part => searchable.includes(part));
+}
+
+function closeReaderPanel() {
+  scripturePanel.hidden = true;
+  scripturePanelFrame.src = "about:blank";
+  document.body.classList.remove("reader-open");
+}
+
+function openReaderPanel(item) {
+  scripturePanelIcon.innerHTML = iconMarkup(item.theme);
+  scripturePanelTheme.textContent = item.theme;
+  scripturePanelTitle.textContent = item.reference;
+  scripturePanelSummary.textContent = `${item.theme} promise in the Good News Translation source.`;
+  scripturePanelSource.href = item.url;
+  scripturePanelFrame.src = item.url;
+  scripturePanel.hidden = false;
+  document.body.classList.add("reader-open");
+  readerCloseButton.focus();
 }
 
 function renderThemeStrip() {
@@ -88,11 +114,10 @@ function renderPromises() {
   emptyMessage.hidden = filtered.length > 0;
 
   grid.replaceChildren(...filtered.map(item => {
-    const card = document.createElement("a");
+    const card = document.createElement("button");
+    card.type = "button";
     card.className = "promise-card";
-    card.href = item.url;
-    card.target = "_blank";
-    card.rel = "noopener";
+    card.addEventListener("click", () => openReaderPanel(item));
     card.innerHTML = `
       <div class="promise-card-top">
         ${iconMarkup(item.theme)}
@@ -100,12 +125,23 @@ function renderPromises() {
       </div>
       <h3>${item.reference}</h3>
       <p>${item.theme}</p>
-      <span class="promise-source">Read in GNT</span>
+      <span class="promise-source">Read in page</span>
     `;
     return card;
   }));
 }
 
 searchInput.addEventListener("input", renderPromises);
+readerCloseButton.addEventListener("click", closeReaderPanel);
+scripturePanel.addEventListener("click", event => {
+  if (event.target === scripturePanel) {
+    closeReaderPanel();
+  }
+});
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && !scripturePanel.hidden) {
+    closeReaderPanel();
+  }
+});
 renderThemeStrip();
 renderPromises();

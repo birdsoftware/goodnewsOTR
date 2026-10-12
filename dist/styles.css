@@ -943,6 +943,46 @@ footer {
   transform: translateY(-1px);
 }
 
+.promises-video {
+  width: min(1220px, 100%);
+  margin: 0 auto 34px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: clamp(18px, 4vw, 42px);
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: clamp(18px, 3vw, 28px);
+  box-shadow: 0 22px 58px rgba(4, 12, 20, 0.22);
+  backdrop-filter: blur(10px);
+}
+
+.promises-video-copy h2 {
+  margin: 10px 0 12px;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  text-shadow: 0 4px 22px rgba(0, 0, 0, 0.35);
+}
+
+.promises-video-copy p:last-child {
+  max-width: 620px;
+  margin: 0;
+  color: #dbe6f0;
+  font-size: 1.04rem;
+}
+
+.promises-video video {
+  width: 100%;
+  max-height: 580px;
+  aspect-ratio: 9 / 16;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  background: #061525;
+  object-fit: cover;
+  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.28);
+}
+
 .promises-board {
   width: min(1220px, 100%);
   margin: auto;
@@ -1081,14 +1121,23 @@ footer {
 }
 
 .promise-card {
+  appearance: none;
   display: grid;
   align-content: space-between;
+  width: 100%;
   min-height: 188px;
   padding: 18px;
   border: 1px solid #dde5eb;
   background: #fff;
   color: var(--ink);
+  cursor: pointer;
+  text-align: left;
   transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.promise-card:focus-visible {
+  outline: 3px solid rgba(240, 180, 60, 0.42);
+  outline-offset: 2px;
 }
 
 .promise-card:hover {
@@ -1138,6 +1187,122 @@ footer {
   color: var(--muted);
   font-weight: 800;
   text-align: center;
+}
+
+.reader-open {
+  overflow: hidden;
+}
+
+.scripture-panel[hidden] {
+  display: none;
+}
+
+.scripture-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  padding: clamp(10px, 2.5vw, 24px);
+  background: rgba(4, 12, 20, 0.72);
+  overflow: auto;
+}
+
+.scripture-panel-shell {
+  width: min(1120px, 100%);
+  min-height: calc(100svh - clamp(20px, 5vw, 48px));
+  margin: 0 auto;
+  background: var(--paper);
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.36);
+}
+
+.scripture-panel-top {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  min-height: 74px;
+  padding: calc(env(safe-area-inset-top, 0px) + 12px) clamp(14px, 3vw, 28px) 12px;
+  background: var(--navy);
+  color: #fff;
+  border-bottom: 3px solid var(--gold);
+}
+
+.scripture-back {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 800;
+  min-height: 46px;
+  padding: 0 16px;
+}
+
+.scripture-back:hover,
+.scripture-back:focus-visible {
+  outline: none;
+  border-color: var(--gold);
+  color: var(--gold-light);
+}
+
+.scripture-panel-body {
+  padding: clamp(20px, 4vw, 34px);
+}
+
+.scripture-panel-icon {
+  margin-bottom: 14px;
+}
+
+.scripture-panel-icon .theme-icon {
+  width: 58px;
+  height: 58px;
+}
+
+.scripture-panel h2 {
+  margin: 8px 0 8px;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+}
+
+.scripture-panel-body > p:not(.eyebrow) {
+  max-width: 680px;
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.scripture-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.scripture-source-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  border-radius: 4px;
+  padding: 0 16px;
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: 900;
+}
+
+.scripture-frame-wrap {
+  min-height: min(760px, calc(100svh - 300px));
+  border: 1px solid #d7dee5;
+  background: #fff;
+  overflow: hidden;
+}
+
+.scripture-frame-wrap iframe {
+  width: 100%;
+  min-height: min(760px, calc(100svh - 300px));
+  display: block;
+  border: 0;
+  background: #fff;
 }
 
 @media (max-width: 1050px) {
@@ -1472,10 +1637,41 @@ footer {
     width: 100%;
   }
 
+  .promises-video {
+    grid-template-columns: 1fr;
+  }
+
+  .promises-video video {
+    max-width: 360px;
+    margin-inline: auto;
+  }
+
   .promises-grid {
     max-height: none;
     grid-template-columns: 1fr;
     overflow: visible;
+  }
+
+  .scripture-panel {
+    padding: 0;
+  }
+
+  .scripture-panel-shell {
+    min-height: 100svh;
+  }
+
+  .scripture-panel-top {
+    min-height: 70px;
+  }
+
+  .scripture-back,
+  .scripture-source-link {
+    width: 100%;
+  }
+
+  .scripture-frame-wrap,
+  .scripture-frame-wrap iframe {
+    min-height: calc(100svh - 330px);
   }
 }
 

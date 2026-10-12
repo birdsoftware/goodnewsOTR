@@ -52,6 +52,17 @@
       </div>
     </section>
 
+    <section class="promises-video" aria-labelledby="promisesVideoTitle">
+      <div class="promises-video-copy">
+        <p class="eyebrow gold">QUICK GUIDE</p>
+        <h2 id="promisesVideoTitle">Read one promise every day.</h2>
+        <p>Open the page, search what you need, and let God's Word remind you how good He is.</p>
+      </div>
+      <video controls playsinline preload="metadata" poster="/assets/promises-guide-poster.png">
+        <source src="/assets/promises-guide.mp4" type="video/mp4">
+      </video>
+    </section>
+
     <section class="promises-board" aria-labelledby="promisesGridTitle">
       <div class="promise-toolbar">
         <div class="promise-search">
@@ -66,13 +77,33 @@
       <div class="promises-grid-shell">
         <div class="promises-grid-heading">
           <h2 id="promisesGridTitle">Scripture Cards</h2>
-          <p>Tap any card to read the passage on BibleGateway.</p>
+          <p>Tap any card to read the Good News Translation source without leaving this page.</p>
         </div>
         <div class="promises-grid" id="promisesGrid"></div>
         <p class="promise-empty" id="promiseEmpty" hidden>No promises matched that search.</p>
       </div>
     </section>
   </main>
+
+  <aside class="scripture-panel" id="scripturePanel" hidden aria-labelledby="scripturePanelTitle" aria-modal="true" role="dialog">
+    <div class="scripture-panel-shell">
+      <div class="scripture-panel-top">
+        <button class="scripture-back" type="button" data-close-reader>Back to promises</button>
+      </div>
+      <div class="scripture-panel-body">
+        <div class="scripture-panel-icon" id="scripturePanelIcon" aria-hidden="true"></div>
+        <p class="eyebrow gold" id="scripturePanelTheme">Promise</p>
+        <h2 id="scripturePanelTitle">Bible Promise</h2>
+        <p id="scripturePanelSummary">Good News Translation source reading.</p>
+        <div class="scripture-actions">
+          <a class="scripture-source-link" id="scripturePanelSource" href="#" target="_blank" rel="noopener">Open source in new tab</a>
+        </div>
+        <div class="scripture-frame-wrap">
+          <iframe id="scripturePanelFrame" title="Good News Translation source passage" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </aside>
 
   <script src="../promises-data.js"></script>
   <script src="../promises.js"></script>
